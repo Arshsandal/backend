@@ -10,7 +10,7 @@ const routes = require("./routes")
 backend.use(express.json());
 
 backend.use(cors({
-    origin: "*",
+    origin: "https://frontend-e84r.onrender.com", "*",
     methods : ["GET", "PUT", "PATCH", "POST", "DELETE"],
     credentials: true,
 })
