@@ -38,6 +38,4 @@ backend.get("/contact", (req,res)=>{
     res.send("Welcome to the Contact Page")
 })
 
-const PORT = process.env.PORT
-
 backend.listen(PORT,'0.0.0.0',()=> console.log('Server started on port : '+ PORT))
