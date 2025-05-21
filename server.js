@@ -37,3 +37,6 @@ backend.get("/", (req, res) => {
 backend.get("/contact", (req,res)=>{
     res.send("Welcome to the Contact Page")
 })
+
+
+backend.listen(port,'0.0.0.0',()=> console.log('Server started on port : '+ port))
