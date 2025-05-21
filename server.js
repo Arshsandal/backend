@@ -18,8 +18,6 @@ backend.use(cors({
 backend.use(routes)
 backend.use("/uploads", express.static("uploads"));
 
-const PORT = process.env.PORT || 5000;
-
 mongoose.connect(process.env.MONGO_DB_URI)
 .then(() => {
     console.log(colors.green("✓ DB is connected with Backend"));
@@ -40,5 +38,6 @@ backend.get("/contact", (req,res)=>{
     res.send("Welcome to the Contact Page")
 })
 
+const PORT = process.env.PORT
 
 backend.listen(PORT,'0.0.0.0',()=> console.log('Server started on port : '+ PORT))
