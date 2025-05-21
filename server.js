@@ -11,7 +11,8 @@ backend.use(express.json());
 
 backend.use(cors({
     origin: "*",
-    methods : ["GET", "PUT", "PATCH", "POST", "DELETE"]
+    methods : ["GET", "PUT", "PATCH", "POST", "DELETE"],
+    credentials: true,
 })
 );
 
