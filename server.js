@@ -39,4 +39,4 @@ backend.get("/contact", (req,res)=>{
 })
 
 
-backend.listen(PORT,'0.0.0.0',()=> console.log('Server started on port : '+ PORT))
+backend.listen(process.env.PORT,'0.0.0.0',()=> console.log('Server started on port : '+ process.env.PORT))
