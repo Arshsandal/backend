@@ -15,6 +15,7 @@ const authMiddleware = require("../../middlewares/authMiddleware.js")
 const googleLogin = require("../../controllers/auth/googleLogin.js");
 const getBuses = require("../../controllers/auth/getBuses.js");
 const getLatLon = require("../../controllers/auth/getLatLon.js");
+const searchBus = require("../../controllers/auth/searchBus.js");
 
 
 
@@ -29,7 +30,8 @@ route.put("/updateUser/:id", updateUser)
 route.delete("/deleteUser/:id", deleteUser)
 route.put('/updateProfile', authMiddleware , upload, updateProfile);
 route.post("/google", googleLogin)
-route.get("/getBuses", getBuses)
+route.get("/getBuses",checkAuth, getBuses)
 route.get("/getLatLon/:naptanId", getLatLon)
+route.get("/searchBus", searchBus)
 
 module.exports = route

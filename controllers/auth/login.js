@@ -1,7 +1,3 @@
-// 
-
-
-
 const bcrypt = require("bcryptjs");
 const User = require("../../models/User.model");
 const { loginValidation } = require("../../services/validation_schema");
@@ -40,6 +36,7 @@ const login = async (req, res) => {
       email: existingUser.email,
       userId: existingUser._id,
       role: existingUser.role,
+      
     };
 
     const accessToken = generateAccessToken(payload, accessSecret);
